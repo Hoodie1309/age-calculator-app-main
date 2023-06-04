@@ -19,12 +19,10 @@ const getDays = (year, month) => {
 	return new Date(year, month, 0).getDate()
 }
 
-const days = getDays(actualYear, actualMonth)
-
 const calculate = () => {
 	if (
 		dayInput.value > 0 &&
-		dayInput.value <= days &&
+		dayInput.value <= getDays(yearInput.value, monthInput.value) &&
 		monthInput.value > 0 &&
 		monthInput.value <= 12 &&
 		yearInput.value > 0 &&
